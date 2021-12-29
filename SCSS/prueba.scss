@@ -1,0 +1,87 @@
+//SASS PARA INDEX
+
+/*SASS PARA INDEX*/
+
+
+@for $redes from 1 through 4 {
+.red-#{$redes}{
+    font-size: 10px * $redes;
+}
+}
+
+@each $personal in fototrabajando, fotoperro, matecocido{
+    .#{$personal}-index{
+        background-image: url(../multimedia/#{$personal}.jpg);
+        width: 100px;
+        height: 150px;
+        background-position: content;
+    }
+}
+
+ $colores:(
+     azul:#0000ff,
+     naranja:#ff4e00,
+     violeta:#9F00FF,
+     maiz:#ffc3a0
+
+ );
+ @each $blue,$color in $colores{
+     .div-#{$blue}{
+         color: $color;
+         background-color: rgb(255, 255, 255);
+     }
+ }
+
+
+//ESTILOS MENU
+
+nav ul {
+    background-color: rgb(237, 199, 252);
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 20px 10px;
+    margin: 10px 0px;
+    text-decoration: none;
+}
+
+nav ul ul{
+    display: none;
+}
+
+nav ul li :hover ul{
+    display: block;
+    position: absolute;    
+}
+
+nav ol{
+    background-color: rgb(110, 51, 204);
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ol li{
+    list-style-type: none;
+}
+
+nav ol ol{
+    display: none;
+}
+
+nav ol li:hover ol{
+display: block;
+}
+
+.sublista {
+display: none;
+}
+
+.workHover :hover .sublista{
+   display: block;
+}
+
+
